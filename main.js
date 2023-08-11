@@ -18,6 +18,6 @@ app.post('/gener/', (req, res)=>{
     })
 })
 
-app.listen(6000, ()=>{
+app.listen(3000, ()=>{
     console.log("Listin");
 })
