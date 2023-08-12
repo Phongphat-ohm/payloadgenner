@@ -29,7 +29,7 @@ app.post('/user/check', (req, res)=>{
     conn.query(sql, (err, result, fields)=>{
         if(err)throw err;
         res.status(200).send({
-            message: "Good..."
+            message: "Good😁"
         })
     })
 })
