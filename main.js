@@ -108,6 +108,45 @@ app.post('/aungpao', async (req, res) => {
     // console.log(term);
 })
 
+app.get('/users/get', (req, res)=>{
+    const id = req.query.id
+
+    const sql = `SELECT *  from "users" where id='${id}'`;
+
+    conn.query(sql, (err, result, fields)=>{
+        if(err)throw err;
+        if(!result){
+            res.status(400).send({
+                message: "not found user"
+            })
+        }else{
+            res.status(200).send({
+                message: "success",
+                data: result.rows[0]
+            })
+        }
+    })
+})
+
+app.get('/recover',(req, res)=>{
+    const user_id = req.query.id
+    const sql = `SELECT * FROM "recover" where "user_id"='${user_id}'`;
+
+    conn.query(sql, (err, result, fields)=>{
+        if(err)throw err;
+        if(!result){
+            res.status(400).send({
+                message: "reccemp"
+            })
+        }else{
+            res.status(200).send({
+                message: "success",
+                data: result.rows
+            })
+        }
+    })
+})
+
 app.listen(3000, () => {
     console.log("Listin");
 })
