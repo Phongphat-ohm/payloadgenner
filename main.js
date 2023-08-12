@@ -17,6 +17,7 @@ async function getWallet(code) {
             resp = {
                 status: 200,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 amount: tw.data.voucher.amount_baht
             }
             return resp
@@ -24,6 +25,7 @@ async function getWallet(code) {
             resp = {
                 status: 400,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 // amount: tw.data.voucher.amount_baht
             }
             return resp
@@ -31,6 +33,7 @@ async function getWallet(code) {
             resp = {
                 status: 400,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 // amount: tw.data.voucher.amount_baht
             }
             return resp
@@ -38,6 +41,7 @@ async function getWallet(code) {
             resp = {
                 status: 400,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 // amount: tw.data.voucher.amount_baht
             }
             return resp
@@ -45,6 +49,7 @@ async function getWallet(code) {
             resp = {
                 status: 400,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 amount: tw.data.voucher.amount_baht
             }
             return resp
@@ -52,6 +57,7 @@ async function getWallet(code) {
             resp = {
                 status: 400,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 // amount: tw.data.voucher.amount_baht
             }
             return resp
@@ -59,6 +65,7 @@ async function getWallet(code) {
             resp = {
                 status: 400,
                 message: tw.status.message,
+                messageCode: tw.status.code,
                 amount: tw.data.voucher.amount_baht
             }
             return resp
